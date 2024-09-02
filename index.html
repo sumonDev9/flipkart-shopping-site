@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart online shopping</title>
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <!-- daisui and tailwindcss cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <!-- swiper js -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- share style -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            primary: '#212121',
+          },
+          fontFamily: {
+            inter: 'Inter',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-inter bg-[#f9fafb]">
+  <!-- navbar start here -->
+  <nav class="bg-white shadow">
+    <div class="w-11/12 mx-auto navbar pt-0">
+      <!-- left side -->
+      <div class="navbar-start gap-4">
+        <!-- menubar -->
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="lg:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <!-- logo -->
+        <a class=""><img src="./asset/nav-menu/logo.png" class="w-36" alt=""></a>
+      </div>
+      <!-- middle  -->
+      <div class="navbar hidden lg:flex">
+        <!-- form input search -->
+        <label class="bg-[#eff6ff] pl-4 focus:outline-none rounded-xl  flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+            class="h-7 w-7 opacity-70 focus:outline-none">
+            <path fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd" />
+          </svg>
+          <input type="text" class="grow w-[400px] h-12  rounded-xl  bg-[#eff6ff] focus:outline-none text-lg"
+            placeholder="Search for Products, Brands and More" />
+        </label>
+      </div>
+      <!-- right side -->
+      <div class="navbar">
+        <!-- 3 items -->
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1 gap-2">
+            <!-- login small device-->
+            <li class="block md:hidden"><a href="#" class="text-base hover:bg-transparent"><img
+                  src="./asset/nav-menu/user-interface.png" class="w-5" alt="">Login</a></li>
+            <!-- login medium device-->
+            <li class="hidden md:block">
+              <details class="">
+                <summary
+                  class="font-normal text-lg dropdown dropdown-hover  text-[#000000] hover:bg-[#2874F0] hover:text-white">
+                  <img src="./asset/nav-menu/user-interface.png" class="w-5 text-sm md:text-lg" alt="">Login
+                </summary>
+                <ul class="bg-white shadow w-72 space-y-2 dropdown-content menu z-10">
+                  <li>
+                    <div class="flex justify-between">
+                      <a href="#" class="text-base font-medium">
+                        New customer?
+                      </a>
+                      <a href="#" class="text-base text-[#2874F0] font-semibold">Sign Up</a>
+                    </div>
+                  </li>
+                  <hr>
+                  <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none"><i class="fas fa-user"></i>
+                      My Profile</a></li>
+                  <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none"><i class="fas fa-user"></i>
+                      Flipkart Plus Zone</a></li>
+                  <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none"><i class="fas fa-box"></i>
+                      Orders</a></li>
+                  <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none"><i
+                        class="fas fa-heart"></i> Wishlist</a></li>
+                  <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none"><i class="fas fa-gift"></i>
+                      Rewards</a></li>
+                  <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none"><i
+                        class="fas fa-credit-card"></i> Gift Cards</a></li>
+                </ul>
+              </details>
+            </li>
+            <!-- add to cart -->
+
+            <li><a href="#" class="font-normal text-sm md:text-lg text-[#000000] hover:bg-transparent"><img
+                  src="./asset/nav-menu/shopping-cart.png" class="w-5" alt="">Cart</a></li>
+            <!-- Seller -->
+            <li class="hidden md:block"><a href="#"
+                class="d-none  font-normal text-lg text-[#000000] hover:bg-transparent"><img
+                  src="./asset/nav-menu/shop.png" alt="" class="w-5"> Become a Seller</a></li>
+          </ul>
+        </div>
+        <!-- dots-vertical -->
+        <div class="dropdown dropdown-hover dropdown-end hidden md:block">
+          <div tabindex="0" role="button">
+            <div class="w-8">
+              <img src="./asset/nav-menu/menu-dots-vertical.png" alt="">
+            </div>
+          </div>
+          <!-- menu dropdown -->
+          <ul class="menu dropdown-content bg-white shadow p-0 w-60 z-10">
+
+            <li>
+              <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                <i class="fa-regular fa-bell"></i>
+                Notification Perferences
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                <img src="./asset/nav-menu/call.png" class="w-5" alt="">
+                24x7 Customer Care
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                <i class="fa-solid fa-bullhorn"></i>
+                Advertise
+              </a>
+            </li>
+            <li class=" ">
+              <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                <i class="fa-solid fa-download"></i>
+                Download App
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end here -->
+
+  <!-- menu list nav start here -->
+
+  <div class="md:mx-6 bg-white shadow my-3">
+    <div class="swiper-container overflow-hidden  gap-0 lg:px-10">
+      <div class="swiper-wrapper">
+        <!-- Repeat this for each image -->
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/grocery.webp" alt="Image 1" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="mt-2">Grocery</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/mobiles.webp" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Mobiles</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/fashion.jfif" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">fashion</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/laptop.jfif" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Electronics</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/home-decor.png" alt="Image 2" class="w70] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Furniture</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/appliances.webp" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Appliances</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/travel.webp" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Travel</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/toy.jfif" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Beauty,Toys</h2>
+        </div>
+        <div class="swiper-slide text-center p-3">
+          <img src="./asset/nav-menu/bike.jfif" alt="Image 2" class="w-[70px] h-[70px] mx-auto object-cover">
+          <h2 class="text-sm mt-2">Two Wheelers</h2>
+        </div>
+        <!-- Add more images here -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- menu list nav end here -->
+
+  <!-- slider image start here -->
+  <div class="md:mx-6">
+    <div class="swiper-container silderr overflow-hidden relative">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="./asset/banner-slider/banner1.webp" alt="Image 1" class="w-full h-auto object-cover">
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="./asset/banner-slider/banner2webp.webp" alt="Image 2" class="w-full h-auto object-cover">
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="./asset/banner-slider/banner3.webp" alt="Image 3" class="w-full h-auto object-cover">
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <img src="./asset/banner-slider/banner4.webp" alt="Image 4" class="w-full h-auto object-cover">
+        </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <img src="./asset/banner-slider/banner5.webp" alt="Image 5" class="w-full h-auto object-cover">
+        </div>
+      </div>
+
+      <!-- Next/Prev buttons -->
+      <div class="swiper-button-next text-gray-400 bg-white h-20  top-24 w-10 absolute right-0 text-sm  z-10"></div>
+      <div class="swiper-button-prev text-gray-400 bg-white h-20 top-24 w-10 absolute left-0   z-10"></div>
+
+      <!-- Add Pagination if needed -->
+      <div class="swiper-pagination text-white"></div>
+    </div>
+  </div>
+
+
+  <!-- slider image start here -->
+
+  <!-- smartphone start here -->
+
+  <section class="md:mx-6 my-4">
+    <div class="grid grid-cols-12 gap-3">
+      <div class="col-span-12 lg:col-span-10 bg-white shadow border-2 border-red-300">
+        <!-- heading text -->
+        <div class="flex justify-between p-5 ">
+          <h1 class="text-primary text-base md:text-xl font-semibold">Best Deals on smartphones</h1>
+          <a href="#" class="w-8 h-8 bg-[#2874F0] flex items-center justify-center rounded-full text-white text-sm"><i class="fa-solid fa-greater-than"></i></a>
+        </div>
+        <!-- slider product -->
+        <div class="swiper-container overflow-hidden product relative">
+          <div class="swiper-wrapper pl-5 py-3">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                  <a href="#"><figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                    <img src="./asset/phone/phone1.webp" alt="Image 1" class="w-[150px] h-[150px]  object-cover">
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-sm">Realme P1 5g</h2>
+                    <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;14,999</p>
+                   </div></a>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                 <a href="#">
+                  <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                    <img src="./asset/phone/phone2.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-sm">Poco M6 5G</h2>
+                    <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;9,249*</p>
+                  </div>
+                 </a>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                  <a href="#">
+                    <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                      <img src="./asset/phone/phone3.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-sm">Realme P1 Pro 5G</h2>
+                      <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;20,999</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                 <a href="#">
+                  <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                    <img src="./asset/phone/phone4.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-sm">Nothing Phone 2a</h2>
+                    <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;22,999*</p>
+                  </div>
+                 </a>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                 <a href="#">
+                  <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                    <img src="./asset/phone/phone5.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-sm">Moto G64</h2>
+                    <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;13,999*</p>
+                  </div>
+                 </a>
+                </div>
+              </div>
+              <!-- slide 6 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                 <a href="#">
+                  <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                    <img src="./asset/phone/phone6.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-sm">Infinix GT 20 Pro</h2>
+                    <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;17,999*</p>
+                  </div>
+                 </a>
+                </div>
+              </div>
+              <!-- slider 7 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                 <a href="#">
+                  <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                    <img src="./asset/phone/phone7.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-sm">vivo T3x 5G</h2>
+                    <p class="text-sm font-extrabold tracking-tighter">From &nbsp;&#8377;12,499*</p>
+                  </div>
+                 </a>
+                </div>
+              </div>
+              <!-- slider 8 -->
+              <div class="swiper-slide ">
+                <div class="card bg-base-100 border-2 border-[rgb(233, 233, 233)] shadow rounded-md">
+                  <a href="#">
+                    <figure class="px-5 pt-5 hover:scale-110 transition duration-300 ease-out">
+                      <img src="./asset/phone/phone8.webp" alt="Image 1" class="w-[150px] h-[150px] object-cover">
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-sm">Samsung S23 FE</h2>
+                      <p class="text-sm font-extrabold tracking-tighter">From &nbsp; &#8377; 39,999*</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+          </div>
+      
+          <!-- Next/Prev buttons -->
+          <div class="swiper-button-next hidden md:block bg-white text-gray-400 w-10 h-20 shadow-md rounded-s-md absolute right-0 top-1/2 transform -translate-y-1/2 z-10 "></div>
+          <div class="swiper-button-prev hidden md:block bg-white text-gray-400 w-10 h-20 shadow-md rounded-e-md absolute left-0 top-1/2 transform -translate-y-1/2 z-10 "></div>
+      
+       
+      </div>
+      
+      </div>
+
+      <div class="hidden lg:block lg:col-span-2 bg-white shadow py-3 border-2 border-red-300">
+        <img src="./asset/electronic-slider/add.webp" class="w-full h-[355px] object-cover"  alt="">
+      </div>
+    </div>
+  </section>
+  <!-- smartphone end here -->
+
+  <!-- offer start here -->
+   <section class="md:mx-6 my-4 px-2">
+    <div class="grid grid-cols-3 gap-2 md:gap-4">
+      <img src="./asset/offer/offer1.webp" alt="">
+      <img src="./asset/offer/offer2.webp" alt="">
+      <img src="./asset/offer/offer3.webp" alt="">
+      <img src="./asset/offer/offer4.webp" alt="">
+      <img src="./asset/offer/offer5.webp" alt="">
+      <img src="./asset/offer/offer6.webp" alt="">
+      <img src="./asset/offer/offer7.webp" alt="">
+      <img src="./asset/offer/offer8.webp" alt="">
+      <img src="./asset/offer/offer9.webp" alt="">
+    </div>
+   </section>
+  <!-- offer end here -->
+  <!-- slider end here -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="site.js"></script>
+
+
+</body>
+
+</html>
