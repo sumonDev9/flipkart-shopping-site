@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product Details</title>
+  <!-- daisui and tailwindcss cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <!-- swiper js -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- share style -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            primary: '#212121',
+            textt: '#2874F0'
+          },
+          fontFamily: {
+            inter: 'Inter',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- header start here -->
+  <header>
+    <!-- navbar start here -->
+    <nav class="bg-textt">
+      <div class="w-10/12 mx-auto flex justify-between items-center py-2 px-0">
+        <!-- left side -->
+        <div>
+          <a href="#" class="md:hidden"><img src="./asset/nav-menu/flipkart-plus_8d85f4.png" class="w-20" alt=""></a>
+          <a class="text-[#F0F0F0] hover:underline decoration-1 hidden md:block"><img src="./asset/nav-menu/flipkart-plus_8d85f4.png"
+              class="w-20" alt="">Explore <span class="text-[#FFE500]">Plus</span></a>
+        </div>
+        <!-- middle side -->
+        <div class="hidden md:block">
+          <!-- form input search -->
+          <label class="bg-[#eff6ff] pl-4 focus:outline-none rounded-md  flex items-center gap-2">
+            <input type="text" class="grow w-[500px] h-12  bg-[#eff6ff] focus:outline-none text-lg"
+              placeholder="Search for Products, Brands and More" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+              class="h-7 w-7 mr-2 opacity-70 focus:outline-none">
+              <path fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd" />
+            </svg>
+          </label>
+        </div>
+        <!-- right side -->
+         
+        <div>
+          <ul class="flex gap-5">
+            <li class="md:hidden"><i class="fa-solid fa-magnifying-glass text-lg text-white"></i></li>
+            <li class="md:hidden"><a href="#" class="text-lg text-white font-medium">Login</a></li>
+            <li class="dropdown dropdown-hover dropdown-center hidden md:block">
+              <a href="#" class="text-lg text-white font-medium">My Account</a>
+              <ul tabindex="0" class="dropdown-content menu bg-base-100 space-y-2 rounded z-[1] w-52 p-1 shadow mt-4">
+                <li>
+                  <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none flex gap-4 ">
+                    <i class="fas fa-user text-textt"></i>
+                    My Profile</a>
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                    <i class="fas fa-user text-textt"></i>Flipkart Plus Zone
+                  </a>
+                </li>
+                <hr>
+                <li><a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none flex gap-4">
+                  <i class="fas fa-box text-textt"></i>Orders</a></li>
+                <hr>
+                <li><a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none flex gap-4 ">
+                  <i class="fas fa-heart text-textt"></i> Wishlist</a>
+                </li>
+                <hr>
+                <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none">
+                    <i class="fas fa-gift text-textt"></i> Rewards</a></li>
+                <hr>
+                <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none">
+                    <i class="fas fa-credit-card text-textt"></i> Gift Cards</a></li>
+                <hr>
+                <li><a href="#" class="text-sm hover:bg-[#eff6ff] flex gap-4 rounded-none">
+                    <i class="fa-solid fa-right-from-bracket text-textt"></i> Logout</a></li>
+            </ul>
+            </li>
+            <li><a href="#" class="text-lg text-white font-medium hidden md:block">Become a Seller</a></li>
+            <li class="dropdown dropdown-hover dropdown-center hidden md:block">
+              <a href="#" class="text-lg text-white font-medium">More</a>
+              <ul tabindex="0" class="dropdown-content menu bg-base-100  space-y-2 rounded z-[1] w-52 p-1 shadow mt-4">
+                <li>
+                  <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                    <i class="fa-regular fa-bell text-textt"></i>
+                    Notification Perferences
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                    <img src="./asset/nav-menu/call.png" class="w-5 text-textt" alt="">
+                    24x7 Customer Care
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                    <i class="fa-solid fa-bullhorn text-textt"></i>
+                    Advertise
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="#" class="text-sm hover:bg-[#eff6ff] rounded-none">
+                    <i class="fa-solid fa-download text-textt"></i>
+                    Download App
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#" class="text-lg text-white font-medium"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end here -->
+  </header>
+  <!-- header end here -->
+
+  <!-- main start here -->
+  <main></main>
+  <!-- main end here -->
+
+  <!-- footer start here -->
+  <footer></footer>
+  <!-- footer end here -->
+</body>
+
+</html>
